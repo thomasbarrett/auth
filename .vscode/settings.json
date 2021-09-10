@@ -1,6 +1,19 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "libpq-fe.h": "c"
+        "libpq-fe.h": "c",
+        "string.h": "c",
+        "istream": "c",
+        "*.tcc": "c",
+        "cstddef": "c",
+        "stdint.h": "c",
+        "stdlib.h": "c",
+        "util.h": "c",
+        "__locale": "c",
+        "locale": "c",
+        "thread": "c",
+        "cli.h": "c",
+        "stdbool.h": "c",
+        "regex.h": "c"
     }
 }

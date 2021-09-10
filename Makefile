@@ -1,7 +1,9 @@
 CC = cc
 
-CFLAGS = -std=c11 -fsanitize=address -O0 -g -Iinclude -I/usr/include/postgresql -Wall -pedantic -Wno-unused-command-line-argument -pthread -lpq
-SRC_FILES = sha256
+OPENSSL_DIR = /usr/local/opt/openssl@1.1/
+OPENSSL_SUPPORT = -I$(OPENSSL_DIR)/include -L$(OPENSSL_DIR)/lib
+CFLAGS = -std=c11 -fsanitize=address -O0 -g -Iinclude -I/usr/include/postgresql $(OPENSSL_SUPPORT) -Wall -pedantic -Wno-unused-command-line-argument -pthread -lpq -lssl -lcrypto
+SRC_FILES = sha256 smtp util auth_client cli
 OBJ_FILES = $(addprefix obj/,$(SRC_FILES:=.o))
 
 MAIN = main schema
